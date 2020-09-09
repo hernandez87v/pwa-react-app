@@ -10,7 +10,6 @@ const App = () => {
   const search = async (e) => {
     if (e.key === 'Enter') {
       const data = await fetchWeather(query);
-      console.log(data);
       setWeather(data);
       setQuery('');
     }
@@ -20,8 +19,11 @@ const App = () => {
     <div className="main-container">
       <input
         type="text"
+        role="textbox"
+        contenteditable="true"
+        aria-required="true"
         className="search"
-        placeholder="Search..."
+        placeholder="Enter City..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyPress={search}
