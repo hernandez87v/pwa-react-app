@@ -1,3 +1,9 @@
+A PWA(Progressive Web Application) weather application optimized to meet :flashlight: Lighthouse criteria.
+
+## Next up:
+
+:arrow_right: Work on adding more detailed weather info.
+
 ## :computer: Desktop Home Page view
 
 ![Progressive Weather App Home Page](/public/images/PWA-home.png)
