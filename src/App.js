@@ -16,7 +16,7 @@ const App = () => {
   };
 
   return (
-    <div className="main-container">
+    <div className="main-container" rel="preconnect">
       <input
         type="text"
         title="search"
