@@ -16,11 +16,7 @@ const App = () => {
   };
 
   return (
-    <div
-      className="main-container"
-      rel="dns-prefetch"
-      href="https://images.pexels.com/photos/1624256/pexels-photo-1624256.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-    >
+    <div className="main-container" rel="preload">
       <input
         type="text"
         title="search"
