@@ -1,6 +1,6 @@
 ### Click on the link over there :point_right: to try it out !
 
-A PWA(Progressive Web Application) weather app optimized to meet :flashlight: Lighthouse criteria.
+A PWA(Progressive Web Application) :sunny: weather app optimized to meet :flashlight: Lighthouse criteria.
 
 ## Next up:
 
@@ -17,6 +17,10 @@ A PWA(Progressive Web Application) weather app optimized to meet :flashlight: Li
 ## :heavy_check_mark: PWA Score
 
 ![PWA Lighthouse Score](/public/images/PWA-Lighthouse-score.png)
+
+## :package: PWA Install
+
+![PWA Install button](/public/images/PWA-WeatherApp-Install.png)
 
 ## Available Scripts
 
