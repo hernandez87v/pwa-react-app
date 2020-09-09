@@ -1,3 +1,5 @@
+### Click on the link over there :point_right: to try it out !
+
 A PWA(Progressive Web Application) weather app optimized to meet :flashlight: Lighthouse criteria.
 
 ## Next up:
