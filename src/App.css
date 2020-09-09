@@ -2,10 +2,16 @@ html,
 body,
 #root {
   font: 0.9rem sans-serif;
-  background: #2369e0;
+  background: #0f131b;
   color: #ffffff;
   height: 100%;
   margin: 0;
+}
+
+input,
+select,
+textarea {
+  color: #ffffff;
 }
 
 .main-container {
