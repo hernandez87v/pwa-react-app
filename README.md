@@ -1,4 +1,4 @@
-A PWA(Progressive Web Application) weather application optimized to meet :flashlight: Lighthouse criteria.
+A PWA(Progressive Web Application) weather app optimized to meet :flashlight: Lighthouse criteria.
 
 ## Next up:
 
@@ -7,6 +7,14 @@ A PWA(Progressive Web Application) weather application optimized to meet :flashl
 ## :computer: Desktop Home Page view
 
 ![Progressive Weather App Home Page](/public/images/PWA-home.png)
+
+## :heavy_check_mark: Lighthouse Score
+
+![Progressive Weather App Lighthouse Score](/public/images/PWA-WeatherApp-Lighthouse-score.png)
+
+## :heavy_check_mark: Lighthouse Score
+
+![PWA Lighthouse Score](/public/images/PWA-Lighthouse-score.png)
 
 ## Available Scripts
 
@@ -51,26 +59,6 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
 ### Making a Progressive Web App
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
