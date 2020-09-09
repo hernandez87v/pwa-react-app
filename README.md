@@ -12,7 +12,7 @@ A PWA(Progressive Web Application) weather app optimized to meet :flashlight: Li
 
 ![Progressive Weather App Lighthouse Score](/public/images/PWA-WeatherApp-Lighthouse-score.png)
 
-## :heavy_check_mark: Lighthouse Score
+## :heavy_check_mark: PWA Score
 
 ![PWA Lighthouse Score](/public/images/PWA-Lighthouse-score.png)
 
