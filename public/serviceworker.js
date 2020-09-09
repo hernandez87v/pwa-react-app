@@ -6,10 +6,10 @@ const self = this;
 // Install SW
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(() => {
+    caches.open(CACHE_NAME).then((cache) => {
       console.log('opened cache');
 
-      return caches.addAll(urlsToCache);
+      return cache.addAll(urlsToCache);
     })
   );
 });
@@ -29,7 +29,7 @@ self.addEventListener('activate', (event) => {
   cacheWhitelist.push(CACHE_NAME);
 
   event.waitUntil(
-    cahces.keys().then((cacheNames) =>
+    caches.keys().then((cacheNames) =>
       Promise.all(
         cacheNames.map((cacheName) => {
           if (!cacheWhitelist.includes(cacheName)) {
