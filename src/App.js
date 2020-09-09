@@ -19,10 +19,10 @@ const App = () => {
     <div className="main-container">
       <input
         type="text"
-        contentEditable="true"
+        title="search"
         aria-required="true"
         className="search"
-        placeholder="Enter City..."
+        placeholder="Search city here..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyPress={search}
