@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :computer: Desktop Home Page view
+
+![Progressive Weather App Home Page](/public/images/PWA-home.png)
 
 ## Available Scripts
 
