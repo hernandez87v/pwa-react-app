@@ -19,8 +19,7 @@ const App = () => {
     <div className="main-container">
       <input
         type="text"
-        role="textbox"
-        contenteditable="true"
+        contentEditable="true"
         aria-required="true"
         className="search"
         placeholder="Enter City..."
