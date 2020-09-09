@@ -20,7 +20,7 @@ A PWA(Progressive Web Application) :sunny: weather app optimized to meet :flashl
 
 ## :package: PWA Install
 
-![PWA Install button](/public/images/PWA-WeatherApp-Install.png)
+![PWA Install button](/public/images/PWA-WeatherApp-install.png)
 
 ## Available Scripts
 
