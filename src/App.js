@@ -14,7 +14,6 @@ const App = () => {
       setQuery('');
     }
   };
-
   return (
     <div className="main-container" rel="preload">
       <input
@@ -31,7 +30,14 @@ const App = () => {
         <div className="city">
           <h2 className="city-name">
             <span>{weather.name}</span>
-            <sup>{weather.sys.country}</sup>
+            <sup>
+              {' '}
+              <img
+                className="country-flag"
+                src={`https://openweathermap.org/images/flags/${weather.sys.country.toLowerCase()}.png`}
+                alt={weather.sys.country}
+              />
+            </sup>
           </h2>
           <div className="city-temp">
             {Math.round(weather.main.temp)}
