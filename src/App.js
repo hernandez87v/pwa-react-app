@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { fetchWeather } from './api/fetchWeather';
 import './App.css';
 
+// import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+
 const App = () => {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
@@ -14,8 +16,20 @@ const App = () => {
       setQuery('');
     }
   };
+
   return (
     <div className="main-container" rel="preload">
+      {/* <div className="search-container">
+        <GooglePlacesAutocomplete
+          apiKey={`API-KEY-HERE`}
+          selectProps={{
+            query,
+            onChange: setQuery,
+            placeholder: 'Search city here...',
+            onKeyPress: { search },
+          }}
+        />
+      </div> */}
       <input
         type="text"
         title="search"
