@@ -1,8 +1,6 @@
 const CACHE_NAME = 'version-1';
 const urlsToCache = ['index.html', 'offline.html'];
-
 const self = this;
-
 // Install SW
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -11,7 +9,6 @@ self.addEventListener('install', (event) => {
     })
   );
 });
-
 // Listen for requests
 self.addEventListener('fetch', (event) => {
   event.respondWith(
@@ -20,12 +17,10 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
-
 // Active the SW
 self.addEventListener('activate', (event) => {
   const cacheWhitelist = [];
   cacheWhitelist.push(CACHE_NAME);
-
   event.waitUntil(
     caches.keys().then((cacheNames) =>
       Promise.all(
