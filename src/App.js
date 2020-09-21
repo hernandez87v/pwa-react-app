@@ -62,12 +62,7 @@ const App = () => {
               alt={weather.weather[0].description}
             />
             <p>{weather.weather[0].description}</p>
-            <img
-              className="city-icon"
-              src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
-              alt={weather.weather[0].description}
-            />
-            <p>{weather.wind.speed}</p>
+            <p>Wind: {weather.wind.speed}m/s</p>
           </div>
         </div>
       )}
