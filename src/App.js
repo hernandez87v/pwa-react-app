@@ -55,6 +55,10 @@ const App = () => {
             {Math.round(weather.main.temp)}
             <sup>&deg;C</sup>
           </div>
+          <p>
+            Feels like: {Math.round(weather.main.feels_like)}
+            <sup>&deg;C</sup>
+          </p>
           <div className="info">
             <img
               className="city-icon"
@@ -62,10 +66,6 @@ const App = () => {
               alt={weather.weather[0].description}
             />
             <p>{weather.weather[0].description}</p>
-            <p>
-              Feels like: {Math.round(weather.main.feels_like)}
-              <sup>&deg;C</sup>
-            </p>
             <p>Wind: {weather.wind.speed}m/s</p>
           </div>
         </div>
