@@ -62,6 +62,10 @@ const App = () => {
               alt={weather.weather[0].description}
             />
             <p>{weather.weather[0].description}</p>
+            <p>
+              Feels like: {Math.round(weather.main.feels_like)}
+              <sup>&deg;C</sup>
+            </p>
             <p>Wind: {weather.wind.speed}m/s</p>
           </div>
         </div>
