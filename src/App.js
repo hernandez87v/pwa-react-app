@@ -55,10 +55,12 @@ const App = () => {
             {Math.round(weather.main.temp)}
             <sup>&deg;C</sup>
           </div>
-          <p>
+          <div className="feels-like">
+
             Feels like: {Math.round(weather.main.feels_like)}
             <sup>&deg;C</sup>
-          </p>
+
+          </div>
           <div className="info">
             <img
               className="city-icon"
