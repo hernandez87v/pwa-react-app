@@ -56,10 +56,18 @@ const App = () => {
             <sup>&deg;C</sup>
           </div>
           <div className="feels-like">
-
             Feels like: {Math.round(weather.main.feels_like)}
             <sup>&deg;C</sup>
-
+          </div>
+          <div className="min_max_temp">
+            <p>
+            Min: {Math.round(weather.main.temp_min)}
+            <sup>&deg;C</sup>
+            </p>
+            <p>
+            Max: {Math.round(weather.main.temp_max)}
+            <sup>&deg;C</sup>
+            </p>
           </div>
           <div className="info">
             <img

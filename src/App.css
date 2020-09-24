@@ -75,6 +75,10 @@ p {
   letter-spacing: 0.05em;
 }
 
+.min_max_temp p{
+  text-transform: lowercase;
+}
+
 .city-temp {
   font-size: 5rem;
   font-weight: bold;
