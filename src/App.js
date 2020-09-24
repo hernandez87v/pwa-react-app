@@ -14,6 +14,10 @@ const App = () => {
       setQuery('');
     }
   };
+  // console.log(weather.city.sun.rise)
+  // let unix_sunrise = new Date({weather.sys.sunrise})
+  // let unix_sunset = new Date(weather.sys.sunset)
+
 
   return (
     <div className="main-container" rel="preload">
@@ -77,6 +81,14 @@ const App = () => {
             />
             <p>{weather.weather[0].description}</p>
             <p>Wind: {weather.wind.speed}m/s</p>
+          </div>
+          <div className="sun_rise_set">
+            <p>
+            {/* Sunrise: {new Date(weather.sys.sunrise)} */}
+            </p>
+            <p>
+            Sunset: {weather.sys.sunset}
+            </p>
           </div>
         </div>
       )}
