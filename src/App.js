@@ -84,10 +84,10 @@ const App = () => {
           </div>
           <div className="sun_rise_set">
             <p>
-            Sunrise: {new Date(weather.sys.sunrise).getUTCHours()}
+            Sunrise: {new Date(weather.sys.sunrise * 1000).toLocaleString('en-US').slice(10)}
             </p>
             <p>
-            Sunset: {new Date(weather.sys.sunset).toLocaleTimeString('en-GB', { hour12:true })}
+            Sunset: {new Date(weather.sys.sunset * 1000).toLocaleString('en-US').slice(10)}
             </p>
           </div>
         </div>
