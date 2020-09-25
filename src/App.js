@@ -14,10 +14,10 @@ const App = () => {
       setQuery('');
     }
   };
-  // console.log(weather.city.sun.rise)
-  // let unix_sunrise = new Date({weather.sys.sunrise})
+  // let unix_sunrise = Math.round(new Date(weather.sys.sunrise).getTime()/1000)
   // let unix_sunset = new Date(weather.sys.sunset)
-
+  
+  // console.log(query.sys.sunrise)
 
   return (
     <div className="main-container" rel="preload">
@@ -84,10 +84,10 @@ const App = () => {
           </div>
           <div className="sun_rise_set">
             <p>
-            {/* Sunrise: {new Date(weather.sys.sunrise)} */}
+            Sunrise: {new Date(weather.sys.sunrise).getUTCHours()}
             </p>
             <p>
-            Sunset: {weather.sys.sunset}
+            Sunset: {new Date(weather.sys.sunset).toLocaleTimeString('en-GB', { hour12:true })}
             </p>
           </div>
         </div>
