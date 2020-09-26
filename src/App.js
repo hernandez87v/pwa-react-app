@@ -84,7 +84,7 @@ const App = () => {
           </div>
           <div className="sun_rise_set">
             <p>
-            Sunrise: {new Date(weather.sys.sunrise * 1000).toLocaleString('en-US').slice(10)}
+            Sunrise: {new Date(weather.sys.sunrise * 1000).toTimeString()}
             </p>
             <p>
             Sunset: {new Date(weather.sys.sunset * 1000).toLocaleString('en-US').slice(10)}
