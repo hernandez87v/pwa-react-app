@@ -73,15 +73,6 @@ const App = () => {
             <sup>&deg;C</sup>
             </p>
           </div>
-          <div className="info">
-            <img
-              className="city-icon"
-              src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
-              alt={weather.weather[0].description}
-            />
-            <p>{weather.weather[0].description}</p>
-            <p>Wind: {weather.wind.speed}m/s</p>
-          </div>
           <div className="sun_rise_set">
             <p>
             Sunrise: {new Date(weather.sys.sunrise * 1000).toLocaleString('en-US').slice(10)}
@@ -90,6 +81,15 @@ const App = () => {
             <p>
             Sunset: {new Date(weather.sys.sunset * 1000).toLocaleString('en-US').slice(10)}
             </p>
+          </div>
+          <div className="info">
+            <img
+              className="city-icon"
+              src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+              alt={weather.weather[0].description}
+            />
+            <p>{weather.weather[0].description}</p>
+            <p>Wind: {weather.wind.speed}m/s</p>
           </div>
         </div>
       )}
