@@ -14,24 +14,9 @@ const App = () => {
       setQuery('');
     }
   };
-  // let unix_sunrise = Math.round(new Date(weather.sys.sunrise).getTime()/1000)
-  // let unix_sunset = new Date(weather.sys.sunset)
-  
-  // console.log(query.sys.sunrise)
 
   return (
     <div className="main-container" rel="preload">
-      {/* <div className="search-container">
-        <GooglePlacesAutocomplete
-          apiKey={`API-KEY-HERE`}
-          selectProps={{
-            query,
-            onChange: setQuery,
-            placeholder: 'Search city here...',
-            onKeyPress: { search },
-          }}
-        />
-      </div> */}
       <input
         type="text"
         title="search"
