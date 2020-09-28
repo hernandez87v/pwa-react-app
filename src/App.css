@@ -40,7 +40,6 @@ textarea {
 
 div.css-yk16xz-control {
   border-style: none;
-  /* border-radius: 20px; */
   background-color: transparent;
 }
 
@@ -51,7 +50,6 @@ div.css-g1d714-ValueContainer {
 .search-container {
   outline: none;
   width: 250px;
-  /* padding: 20px 7%; */
   border-radius: 20px;
   border: none;
   margin-bottom: 5%;
