@@ -16,11 +16,6 @@ textarea {
 
 .main-container {
   background: linear-gradient(rgb(0, 255, 255), rgba(46, 170, 253, 0.795));
-  background-size: cover;
-  background-position: center;
-}
-
-.main-container {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -36,6 +31,7 @@ textarea {
   border: none;
   margin-bottom: 5%;
   background: rgba(255, 255, 255, 0.568);
+  box-shadow: 10px 10px 5px 0px rgba(189, 189, 189, 0.404);
 }
 
 div.css-yk16xz-control {
@@ -55,6 +51,7 @@ div.css-g1d714-ValueContainer {
   border: none;
   margin-bottom: 5%;
   background: rgba(255, 255, 255, 0.85);
+  box-shadow: 10px 10px 5px 0px rgba(189, 189, 189, 0.404);
 }
 
 .city {
@@ -65,8 +62,8 @@ div.css-g1d714-ValueContainer {
   flex-direction: column;
   padding: 40px 8%;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 10px 10px 5px 0px rgba(112, 112, 112, 0.404);
+  background: rgba(255, 255, 255, 0.644);
+  box-shadow: 10px 10px 5px 0px rgba(189, 189, 189, 0.404);
 }
 
 p {
@@ -151,14 +148,14 @@ div.min_max_temp p {
 }
 
 .card3 {
-  opacity: 0.9;
+  /* opacity: 0.9; */
   width: 25ch;
   height: 25ch;
   background-image: url(https://image.flaticon.com/icons/svg/1146/1146869.svg);
 }
 
 .card4 {
-  opacity: 0.9;
+  /* opacity: 0.9; */
   width: 25ch;
   height: 25ch;
   background-image: url(https://image.flaticon.com/icons/svg/1146/1146860.svg);
