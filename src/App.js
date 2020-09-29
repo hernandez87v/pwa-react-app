@@ -36,8 +36,8 @@ const App = () => {
         // onTouchMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
       >
         <ParallaxLayer
-          offset={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
-          speed={0.5}
+        // offset={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+        // speed={0.5}
         >
           <animated.div
             className="card1"
@@ -45,8 +45,8 @@ const App = () => {
           />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
-          speed={0.5}
+        // offset={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+        // speed={0.5}
         >
           <animated.div
             className="card2"
