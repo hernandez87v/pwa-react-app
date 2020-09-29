@@ -3,7 +3,6 @@ import { fetchWeather } from './api/fetchWeather';
 import { useSpring, animated } from 'react-spring';
 import './App.css';
 
-// import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 const trans1 = (x, y) => `translate3d(${x / 5 - 200}px,${y / 5 - 10}px,0)`;
 const trans2 = (x, y) => `translate3d(${x / 8 + 35}px,${y / 8 - 230}px,0)`;
@@ -32,6 +31,7 @@ const App = () => {
       className="main-container"
       rel="preload"
       onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+      onTouchMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
     >
       <animated.div
         className="card1"
