@@ -1,12 +1,24 @@
 import React, { useState } from 'react';
 import { fetchWeather } from './api/fetchWeather';
+import { useSpring, animated } from 'react-spring';
 import './App.css';
 
 // import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
+const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 8 + 35}px,${y / 8 - 230}px,0)`;
+const trans3 = (x, y) => `translate3d(${x / 6 - 250}px,${y / 6 - 200}px,0)`;
+const trans4 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`;
 
 const App = () => {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
+  //React Spring animation
+  const [props, set] = useSpring(() => ({
+    xy: [0, 0],
+    config: { mass: 10, tension: 550, friction: 140 },
+  }));
+
   const search = async (e) => {
     if (e.key === 'Enter') {
       const data = await fetchWeather(query);
@@ -16,7 +28,27 @@ const App = () => {
   };
 
   return (
-    <div className="main-container" rel="preload">
+    <div
+      className="main-container"
+      rel="preload"
+      onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+    >
+      <animated.div
+        className="card1"
+        style={{ transform: props.xy.interpolate(trans1) }}
+      />
+      <animated.div
+        className="card2"
+        style={{ transform: props.xy.interpolate(trans2) }}
+      />
+      <animated.div
+        className="card3"
+        style={{ transform: props.xy.interpolate(trans3) }}
+      />
+      <animated.div
+        className="card4"
+        style={{ transform: props.xy.interpolate(trans4) }}
+      />
       <input
         type="text"
         title="search"
@@ -50,21 +82,27 @@ const App = () => {
           </div>
           <div className="min_max_temp">
             <p>
-            Min: {Math.round(weather.main.temp_min)}
-            <sup>&deg;C</sup>
+              Min: {Math.round(weather.main.temp_min)}
+              <sup>&deg;C</sup>
             </p>
             <p>
-            Max: {Math.round(weather.main.temp_max)}
-            <sup>&deg;C</sup>
+              Max: {Math.round(weather.main.temp_max)}
+              <sup>&deg;C</sup>
             </p>
           </div>
           <div className="sun_rise_set">
             <p>
-            Sunrise: {new Date(weather.sys.sunrise * 1000).toLocaleString('en-US').slice(10)}
-            {/* Sunrise: {new Date(weather.sys.sunrise * 1000).toTimeString()} */}
+              Sunrise:{' '}
+              {new Date(weather.sys.sunrise * 1000)
+                .toLocaleString('en-US')
+                .slice(10)}
+              {/* Sunrise: {new Date(weather.sys.sunrise * 1000).toTimeString()} */}
             </p>
             <p>
-            Sunset: {new Date(weather.sys.sunset * 1000).toLocaleString('en-US').slice(10)}
+              Sunset:{' '}
+              {new Date(weather.sys.sunset * 1000)
+                .toLocaleString('en-US')
+                .slice(10)}
             </p>
           </div>
           <div className="info">
