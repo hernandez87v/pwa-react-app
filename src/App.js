@@ -28,12 +28,7 @@ const App = () => {
   };
 
   return (
-    <Parallax
-      pages={2}
-      scrolling={false}
-      horizontal
-      // ref={(ref) => (this.parallax = ref)}
-    >
+    <Parallax pages={1} scrolling={false}>
       <div
         className="main-container"
         rel="preload"
