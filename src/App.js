@@ -4,24 +4,16 @@ import { useSpring, animated } from 'react-spring';
 import './App.css';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
-const trans1 = (x, y) => `translate3d(${x / 5 - 0}px,${y / 5 - 0}px,0)`;
-const trans2 = (x, y) => `translate3d(${x / 9 - 0}px,${y / 9 - 250}px,0)`;
-const trans3 = (x, y) => `translate3d(${x / 10 - 0}px,${y / 10 + 250}px,0)`;
-const trans4 = (x, y) => `translate3d(${x / 5 - 250}px,${y / 5 - 0}px,0)`;
-const trans5 = (x, y) => `translate3d(${x / 6 + 250}px,${y / 5 - 0}px,0)`;
-const trans6 = (x, y) => `translate3d(${x / 7 - 250}px,${y / 7 - 250}px,0)`;
-const trans7 = (x, y) => `translate3d(${x / 8 - 350}px,${y / 8 + 350}px,0)`;
-const trans8 = (x, y) => `translate3d(${x / 5 + 350}px,${y / 5 - 350}px,0)`;
-const trans9 = (x, y) => `translate3d(${x / 8 + 250}px,${y / 8 + 250}px,0)`;
+const trans1 = (x, y) => `translate3d(${x / 10 - 0}px,${y / 10 - 0}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 6 - 0}px,${y / 6 - 300}px,0)`;
+const trans3 = (x, y) => `translate3d(${x / 5 - 0}px,${y / 5 + 240}px,0)`;
+const trans4 = (x, y) => `translate3d(${x / 5 - 270}px,${y / 5 - 0}px,0)`;
+const trans5 = (x, y) => `translate3d(${x / 6 + 330}px,${y / 5 - 0}px,0)`;
+const trans6 = (x, y) => `translate3d(${x / 7 - 290}px,${y / 7 - 280}px,0)`;
+const trans7 = (x, y) => `translate3d(${x / 8 - 280}px,${y / 8 + 260}px,0)`;
+const trans8 = (x, y) => `translate3d(${x / 5 + 270}px,${y / 5 - 280}px,0)`;
+const trans9 = (x, y) => `translate3d(${x / 8 + 240}px,${y / 8 + 240}px,0)`;
 
-// const trans1 = (x, y) => `translate3d(${x / 5 - 200}px,${y / 5 - 10}px,0)`;
-// const trans2 = (x, y) => `translate3d(${x / 8 + 35}px,${y / 8 - 230}px,0)`;
-// const trans3 = (x, y) => `translate3d(${x / 6 - 250}px,${y / 6 - 200}px,0)`;
-// const trans4 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`;
-// const trans5 = (x, y) => `translate3d(${x / 5 + 200}px,${y / 5 + 10}px,0)`;
-// const trans6 = (x, y) => `translate3d(${x / -8 + 35}px,${y / 8 + 230}px,0)`;
-// const trans7 = (x, y) => `translate3d(${x / 6 + 250}px,${y / 6 + 200}px,0)`;
-// const trans8 = (x, y) => `translate3d(${x / -3.5}px,${y / -3.5}px,0)`;
 const App = () => {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
@@ -46,7 +38,6 @@ const App = () => {
       className="main-container"
       rel="preload"
       onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
-      // onTouchMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
     >
       <animated.div
         className="card1"
