@@ -8,7 +8,7 @@ const trans1 = (x, y) => `translate3d(${x / 10 - 0}px,${y / 10 - 0}px,0)`;
 const trans2 = (x, y) => `translate3d(${x / 6 - 0}px,${y / 6 - 300}px,0)`;
 const trans3 = (x, y) => `translate3d(${x / 5 - 0}px,${y / 5 + 240}px,0)`;
 const trans4 = (x, y) => `translate3d(${x / 5 - 270}px,${y / 5 - 0}px,0)`;
-const trans5 = (x, y) => `translate3d(${x / 6 + 330}px,${y / 5 - 0}px,0)`;
+const trans5 = (x, y) => `translate3d(${x / 6 + 250}px,${y / 5 - 0}px,0)`;
 const trans6 = (x, y) => `translate3d(${x / 7 - 290}px,${y / 7 - 280}px,0)`;
 const trans7 = (x, y) => `translate3d(${x / 8 - 280}px,${y / 8 + 260}px,0)`;
 const trans8 = (x, y) => `translate3d(${x / 5 + 270}px,${y / 5 - 280}px,0)`;
