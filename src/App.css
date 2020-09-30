@@ -114,8 +114,9 @@ div.css-g1d714-ValueContainer {
   flex-direction: column;
   padding: 40px 8%;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.644);
-  box-shadow: 10px 10px 5px 0px rgba(189, 189, 189, 0.404);
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.226);
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.781);
 }
 
 p {
