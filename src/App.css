@@ -6,6 +6,7 @@ body,
   color: #000000;
   height: 100%;
   margin: 0;
+  overflow: hidden;
 }
 
 input,
@@ -18,7 +19,14 @@ textarea {
 .card1,
 .card2,
 .card3,
-.card4 {
+.card4,
+.card5,
+.card6,
+.card7,
+.card8,
+.card9 {
+  width: 25ch;
+  height: 25ch;
   position: absolute;
   border-radius: 5px;
   background-size: cover;
@@ -28,29 +36,31 @@ textarea {
 }
 
 .card1 {
-  width: 25ch;
-  height: 25ch;
   background-image: url(https://image.flaticon.com/icons/svg/979/979585.svg);
 }
-
 .card2 {
-  width: 25ch;
-  height: 25ch;
-  background-image: url(https://image.flaticon.com/icons/svg/3542/3542428.svg);
+  background-image: url(https://image.flaticon.com/icons/svg/1146/1146870.svg);
 }
-
 .card3 {
-  /* opacity: 0.9; */
-  width: 25ch;
-  height: 25ch;
   background-image: url(https://image.flaticon.com/icons/svg/1146/1146856.svg);
 }
-
 .card4 {
-  /* opacity: 0.9; */
-  width: 25ch;
-  height: 25ch;
-  background-image: url(https://image.flaticon.com/icons/svg/1146/1146860.svg);
+  background-image: url(https://image.flaticon.com/icons/svg/1146/1146858.svg);
+}
+.card5 {
+  background-image: url(https://image.flaticon.com/icons/svg/1146/1146880.svg);
+}
+.card6 {
+  background-image: url(https://image.flaticon.com/icons/svg/1146/1146915.svg);
+}
+.card7 {
+  background-image: url(https://image.flaticon.com/icons/svg/1146/1146887.svg);
+}
+.card8 {
+  background-image: url(https://image.flaticon.com/icons/svg/3542/3542428.svg);
+}
+.card9 {
+  background-image: url(https://image.flaticon.com/icons/svg/1146/1146878.svg);
 }
 
 .main-container {
@@ -155,6 +165,19 @@ div.min_max_temp p {
 }
 
 @media only screen and (max-width: 600px) {
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6,
+  .card7,
+  .card8,
+  .card9 {
+    position: fixed;
+    overflow: hidden;
+  }
+
   .search {
     padding: 20px 15%;
   }

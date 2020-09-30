@@ -4,11 +4,24 @@ import { useSpring, animated } from 'react-spring';
 import './App.css';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
-const trans1 = (x, y) => `translate3d(${x / 5 - 200}px,${y / 5 - 10}px,0)`;
-const trans2 = (x, y) => `translate3d(${x / 8 + 35}px,${y / 8 - 230}px,0)`;
-const trans3 = (x, y) => `translate3d(${x / 6 - 250}px,${y / 6 - 200}px,0)`;
-const trans4 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`;
+const trans1 = (x, y) => `translate3d(${x / 5 - 0}px,${y / 5 - 0}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 9 - 0}px,${y / 9 - 250}px,0)`;
+const trans3 = (x, y) => `translate3d(${x / 10 - 0}px,${y / 10 + 250}px,0)`;
+const trans4 = (x, y) => `translate3d(${x / 5 - 250}px,${y / 5 - 0}px,0)`;
+const trans5 = (x, y) => `translate3d(${x / 6 + 250}px,${y / 5 - 0}px,0)`;
+const trans6 = (x, y) => `translate3d(${x / 7 - 250}px,${y / 7 - 250}px,0)`;
+const trans7 = (x, y) => `translate3d(${x / 8 - 350}px,${y / 8 + 350}px,0)`;
+const trans8 = (x, y) => `translate3d(${x / 5 + 350}px,${y / 5 - 350}px,0)`;
+const trans9 = (x, y) => `translate3d(${x / 8 + 250}px,${y / 8 + 250}px,0)`;
 
+// const trans1 = (x, y) => `translate3d(${x / 5 - 200}px,${y / 5 - 10}px,0)`;
+// const trans2 = (x, y) => `translate3d(${x / 8 + 35}px,${y / 8 - 230}px,0)`;
+// const trans3 = (x, y) => `translate3d(${x / 6 - 250}px,${y / 6 - 200}px,0)`;
+// const trans4 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`;
+// const trans5 = (x, y) => `translate3d(${x / 5 + 200}px,${y / 5 + 10}px,0)`;
+// const trans6 = (x, y) => `translate3d(${x / -8 + 35}px,${y / 8 + 230}px,0)`;
+// const trans7 = (x, y) => `translate3d(${x / 6 + 250}px,${y / 6 + 200}px,0)`;
+// const trans8 = (x, y) => `translate3d(${x / -3.5}px,${y / -3.5}px,0)`;
 const App = () => {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
@@ -50,6 +63,26 @@ const App = () => {
       <animated.div
         className="card4"
         style={{ transform: props.xy.interpolate(trans4) }}
+      />
+      <animated.div
+        className="card5"
+        style={{ transform: props.xy.interpolate(trans5) }}
+      />
+      <animated.div
+        className="card6"
+        style={{ transform: props.xy.interpolate(trans6) }}
+      />
+      <animated.div
+        className="card7"
+        style={{ transform: props.xy.interpolate(trans7) }}
+      />
+      <animated.div
+        className="card8"
+        style={{ transform: props.xy.interpolate(trans8) }}
+      />
+      <animated.div
+        className="card9"
+        style={{ transform: props.xy.interpolate(trans9) }}
       />
       <animated.input
         onMouseDown={() => click(true)}
