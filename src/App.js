@@ -17,6 +17,8 @@ const App = () => {
     xy: [0, 0],
     config: { mass: 10, tension: 750, friction: 140 },
   }));
+  const [clicked, click] = useState(false);
+  const { scale } = useSpring({ scale: clicked ? 0.8 : 1 });
 
   const search = async (e) => {
     if (e.key === 'Enter') {
@@ -49,12 +51,19 @@ const App = () => {
         className="card4"
         style={{ transform: props.xy.interpolate(trans4) }}
       />
-      <input
+      <animated.input
+        onMouseDown={() => click(true)}
+        onMouseUp={() => click(false)}
+        onTouchStart={() => click(true)}
+        onTouchEnd={() => click(false)}
+        style={{
+          transform: scale.interpolate((s) => `scale(${s})`),
+        }}
         type="text"
         title="search"
         aria-required="true"
         className="search"
-        placeholder="Search city here..."
+        placeholder="Search city..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyPress={search}
