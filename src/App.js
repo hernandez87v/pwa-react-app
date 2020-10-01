@@ -22,7 +22,7 @@ const App = () => {
   const value = useDeviceOrientation()
   const [props, set] = useSpring(() => ({
     xy: [0, 0],
-    config: { mass: 10, tension: 750, friction: 140 },
+    config: { mass: 20, tension: 750, friction: 250 },
   }));
   set({ xy: calc(value.beta, value.gamma) })
   const [clicked, click] = useState(false);
