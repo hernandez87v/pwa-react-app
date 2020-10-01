@@ -24,7 +24,7 @@ const App = () => {
     xy: [0, 0],
     config: { mass: 10, tension: 750, friction: 140 },
   }));
-  set({ xy: calc(value.beta, value.alpha) })
+  set({ xy: calc(value.beta, value.gamma) })
   const [clicked, click] = useState(false);
   const { scale } = useSpring({ scale: clicked ? 0.8 : 1 });
 
@@ -37,11 +37,11 @@ const App = () => {
   };
 
   return (
-    <div
-      className="main-container"
-      rel="preload"
-      onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
-    >
+        <div
+        className="main-container"
+        rel="preload"
+        onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+        >
       <animated.div
         className="card1"
         style={{ transform: props.xy.interpolate(trans1) }}
