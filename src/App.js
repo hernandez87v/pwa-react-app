@@ -24,7 +24,7 @@ const App = () => {
     xy: [0, 0],
     config: { mass: 10, tension: 750, friction: 140 },
   }));
-  set({ xy: calc(value.beta, value.gamma) })
+  set({ xy: calc(value.beta, value.alpha) })
   const [clicked, click] = useState(false);
   const { scale } = useSpring({ scale: clicked ? 0.8 : 1 });
 
