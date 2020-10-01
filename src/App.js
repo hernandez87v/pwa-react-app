@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { fetchWeather } from './api/fetchWeather';
 import { useSpring, animated } from 'react-spring';
+import useDeviceOrientation from '@rehooks/device-orientation'
 import './App.css';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
@@ -18,10 +19,12 @@ const App = () => {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
   //React Spring animation
+  const value = useDeviceOrientation()
   const [props, set] = useSpring(() => ({
     xy: [0, 0],
     config: { mass: 10, tension: 750, friction: 140 },
   }));
+  set({ xy: calc(value.beta, value.gamma) })
   const [clicked, click] = useState(false);
   const { scale } = useSpring({ scale: clicked ? 0.8 : 1 });
 
