@@ -14,7 +14,11 @@ const trans6 = (x, y) => `translate3d(${x / 7 - 290}px,${y / 7 - 280}px,0)`;
 const trans7 = (x, y) => `translate3d(${x / 8 - 280}px,${y / 8 + 260}px,0)`;
 const trans8 = (x, y) => `translate3d(${x / 5 + 270}px,${y / 5 - 280}px,0)`;
 const trans9 = (x, y) => `translate3d(${x / 8 + 240}px,${y / 8 + 240}px,0)`;
+var sec = 1425909686;
+var date = new Date(sec * 1000);
+var timestr = date.toLocaleTimeString();
 
+console.log(date, timestr);
 const App = () => {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
@@ -116,7 +120,7 @@ const App = () => {
             Feels like: {Math.round(weather.main.feels_like)}
             <sup>&deg;C</sup>
           </div>
-          <div className="min_max_temp">
+          {/* <div className="min_max_temp">
             <p>
               Min: {Math.round(weather.main.temp_min)}
               <sup>&deg;C</sup>
@@ -125,14 +129,13 @@ const App = () => {
               Max: {Math.round(weather.main.temp_max)}
               <sup>&deg;C</sup>
             </p>
-          </div>
+          </div> */}
           <div className="sun_rise_set">
             <p>
               Sunrise:{' '}
               {new Date(weather.sys.sunrise * 1000)
                 .toLocaleString('en-US')
                 .slice(10)}
-              {/* Sunrise: {new Date(weather.sys.sunrise * 1000).toTimeString()} */}
             </p>
             <p>
               Sunset:{' '}
@@ -147,7 +150,7 @@ const App = () => {
               src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
               alt={weather.weather[0].description}
             />
-            <p>{weather.weather[0].description}</p>
+            <p className="weather_description">{weather.weather[0].description}</p>
             <p>Wind: {weather.wind.speed}m/s</p>
           </div>
         </div>
