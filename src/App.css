@@ -114,6 +114,7 @@ div.css-g1d714-ValueContainer {
 
 .city-name {
   font-size: 2em;
+  margin-bottom: 0;
 }
 
 .city-name sup {
@@ -129,7 +130,7 @@ div.css-g1d714-ValueContainer {
   text-align: center;
 }
 
-.feels-like{
+.feels-like {
   padding-bottom: 3px;
 }
 
@@ -145,10 +146,9 @@ p {
   letter-spacing: 0.02em;
 }
 
-.weather_description{
+.weather_description {
   text-transform: uppercase;
   font-weight: bold;
-  
 }
 
 .info {
