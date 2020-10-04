@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { fetchWeather } from './api/fetchWeather';
 import { useSpring, animated } from 'react-spring';
-import useDeviceOrientation from '@rehooks/device-orientation'
+import useDeviceOrientation from '@rehooks/device-orientation';
 import './App.css';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
@@ -23,12 +23,12 @@ const App = () => {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
   //React Spring animation
-  const value = useDeviceOrientation()
+  const value = useDeviceOrientation();
   const [props, set] = useSpring(() => ({
     xy: [0, 0],
     config: { mass: 20, tension: 750, friction: 250 },
   }));
-  set({ xy: calc(value.beta, value.gamma) })
+  set({ xy: calc(value.beta, value.gamma) });
   const [clicked, click] = useState(false);
   const { scale } = useSpring({ scale: clicked ? 0.8 : 1 });
 
@@ -41,11 +41,11 @@ const App = () => {
   };
 
   return (
-        <div
-        className="main-container"
-        rel="preload"
-        onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
-        >
+    <div
+      className="main-container"
+      rel="preload"
+      onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+    >
       <animated.div
         className="card1"
         style={{ transform: props.xy.interpolate(trans1) }}
@@ -100,7 +100,12 @@ const App = () => {
         onKeyPress={search}
       />
       {weather.main && (
-        <div className="city">
+        <animated.div
+          className="city"
+          // style={{
+          //   transform: scale.interpolate((s) => `scale(${s})`),
+          // }}
+        >
           <h2 className="city-name">
             <span>{weather.name}</span>
             <sup>
@@ -150,10 +155,12 @@ const App = () => {
               src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
               alt={weather.weather[0].description}
             />
-            <p className="weather_description">{weather.weather[0].description}</p>
+            <p className="weather_description">
+              {weather.weather[0].description}
+            </p>
             <p>Wind: {weather.wind.speed}m/s</p>
           </div>
-        </div>
+        </animated.div>
       )}
     </div>
   );
