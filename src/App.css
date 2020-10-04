@@ -14,7 +14,6 @@ select,
 textarea {
   color: #202020;
 }
-
 /* REact Spring   */
 .card1,
 .card2,
@@ -73,7 +72,6 @@ textarea {
   background: linear-gradient(rgb(0, 255, 255), rgba(46, 170, 253, 0.795));
 }
 /* end of React Spring */
-
 .search {
   text-align: center;
   z-index: 1;
