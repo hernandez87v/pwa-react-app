@@ -14,11 +14,7 @@ const trans6 = (x, y) => `translate3d(${x / 7 - 290}px,${y / 7 - 280}px,0)`;
 const trans7 = (x, y) => `translate3d(${x / 8 - 280}px,${y / 8 + 260}px,0)`;
 const trans8 = (x, y) => `translate3d(${x / 5 + 270}px,${y / 5 - 280}px,0)`;
 const trans9 = (x, y) => `translate3d(${x / 8 + 240}px,${y / 8 + 240}px,0)`;
-var sec = 1425909686;
-var date = new Date(sec * 1000);
-var timestr = date.toLocaleTimeString();
 
-console.log(date, timestr);
 const App = () => {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
