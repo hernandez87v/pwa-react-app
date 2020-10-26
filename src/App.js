@@ -34,8 +34,6 @@ const App = () => {
       const data = await fetchWeather(query);
       setWeather(data);
       setQuery('');
-    } else if (e.key === e.error) {
-      console.log('nothing');
     }
   };
 
@@ -89,7 +87,7 @@ const App = () => {
         style={{
           transform: scale.interpolate((s) => `scale(${s})`),
         }}
-        type="text"
+        type="search"
         title="search"
         aria-required="true"
         className="search"
