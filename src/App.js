@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { fetchWeather } from './api/fetchWeather';
 import { useSpring, animated } from 'react-spring';
 import useDeviceOrientation from '@rehooks/device-orientation';
+import moment from 'moment';
 import './App.css';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
@@ -134,16 +135,65 @@ const App = () => {
           <div className="sun_rise_set">
             <p>
               Sunrise:{' '}
-              {new Date(weather.sys.sunrise * 1000)
-                .toLocaleString('en-US')
-                .slice(10)}
+              {
+                (new Date(
+                  weather.dt * 1000 -
+                    weather.timezone * 60000 -
+                    weather.sys.sunrise * 1000
+                ).toLocaleTimeString([], { timeStyle: 'short' }),
+                console.log(
+                  new Date(weather.dt * 1000).toLocaleTimeString([], {
+                    timeStyle: 'short',
+                  }),
+                  new Date(weather.timezone * 60000).toLocaleTimeString([], {
+                    timeStyle: 'short',
+                  }),
+                  new Date(weather.sys.sunrise * 1000).toLocaleTimeString([], {
+                    timeStyle: 'short',
+                  })
+                  //  new Date(weather.dt * 1000).toLocaleTimeString([], {
+                  //     timeStyle: 'short',
+                  //   }),
+                  //   new Date(weather.timezone * 60000).toLocaleTimeString([], {
+                  //     timeStyle: 'short',
+                  //   }),
+                  //   new Date(weather.sys.sunrise * 1000).toLocaleTimeString([], {
+                  //     timeStyle: 'short',
+                  //   })
+                ))
+                // .slice(12, 16)
+              }
             </p>
             <p>
               Sunset:{' '}
-              {new Date(weather.sys.sunset * 1000)
-                .toLocaleString('en-US')
-                .slice(10)}
+              {moment(
+                weather.dt + weather.timezone + weather.sys.sunset
+              ).format('h:mm a')}
             </p>
+            {/* <p>
+              Sunrise:{' '}
+              {
+                new Date(weather.sys.sunrise * 1000).toLocaleTimeString([], {
+                  timeStyle: 'short',
+                })
+                // .slice(12, 16)
+              }
+            </p>
+            <p>
+              Sunset:{' '}
+              {
+                new Date(
+                  weather.dt * 1000 +
+                    weather.timezone * 1000 +
+                    weather.sys.sunrise * 1000
+                ).toLocaleTimeString([], { timeStyle: 'short' })
+                //   ,
+                // console.log(
+                //   'timezone',
+                //   new Date(weather.dt * 1000 + weather.timezone * 1000)
+                //   )
+              }
+            </p> */}
           </div>
           <div className="info">
             <img
