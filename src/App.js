@@ -34,6 +34,8 @@ const App = () => {
       const data = await fetchWeather(query);
       setWeather(data);
       setQuery('');
+    } else if (e.key === e.error) {
+      console.log('nothing');
     }
   };
 
@@ -91,7 +93,7 @@ const App = () => {
         title="search"
         aria-required="true"
         className="search"
-        placeholder="Search city..."
+        placeholder="Search...e.g. vancouver, ca"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyPress={search}
@@ -145,30 +147,6 @@ const App = () => {
                 .utc(weather.sys.sunset + weather.timezone, 'X')
                 .format('h:mm a')}
             </p>
-            {/* <p>
-              Sunrise:{' '}
-              {
-                new Date(weather.sys.sunrise * 1000).toLocaleTimeString([], {
-                  timeStyle: 'short',
-                })
-                // .slice(12, 16)
-              }
-            </p>
-            <p>
-              Sunset:{' '}
-              {
-                new Date(
-                  weather.dt * 1000 +
-                    weather.timezone * 1000 +
-                    weather.sys.sunrise * 1000
-                ).toLocaleTimeString([], { timeStyle: 'short' })
-                //   ,
-                // console.log(
-                //   'timezone',
-                //   new Date(weather.dt * 1000 + weather.timezone * 1000)
-                //   )
-              }
-            </p> */}
           </div>
           <div className="info">
             <img
