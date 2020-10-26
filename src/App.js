@@ -135,9 +135,16 @@ const App = () => {
           <div className="sun_rise_set">
             <p>
               Sunrise:
-              {moment(weather.sys.sunrise, 'X').format('h:mm a')}
+              {moment
+                .utc(weather.sys.sunrise + weather.timezone, 'X')
+                .format('h:mm a')}
             </p>
-            <p>Sunset: {moment(weather.sys.sunset, 'X').format('h:mm a')}</p>
+            <p>
+              Sunset:{' '}
+              {moment
+                .utc(weather.sys.sunset + weather.timezone, 'X')
+                .format('h:mm a')}
+            </p>
             {/* <p>
               Sunrise:{' '}
               {
