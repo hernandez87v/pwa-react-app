@@ -134,42 +134,10 @@ const App = () => {
           </div> */}
           <div className="sun_rise_set">
             <p>
-              Sunrise:{' '}
-              {
-                (new Date(
-                  weather.dt * 1000 -
-                    weather.timezone * 60000 -
-                    weather.sys.sunrise * 1000
-                ).toLocaleTimeString([], { timeStyle: 'short' }),
-                console.log(
-                  new Date(weather.dt * 1000).toLocaleTimeString([], {
-                    timeStyle: 'short',
-                  }),
-                  new Date(weather.timezone * 60000).toLocaleTimeString([], {
-                    timeStyle: 'short',
-                  }),
-                  new Date(weather.sys.sunrise * 1000).toLocaleTimeString([], {
-                    timeStyle: 'short',
-                  })
-                  //  new Date(weather.dt * 1000).toLocaleTimeString([], {
-                  //     timeStyle: 'short',
-                  //   }),
-                  //   new Date(weather.timezone * 60000).toLocaleTimeString([], {
-                  //     timeStyle: 'short',
-                  //   }),
-                  //   new Date(weather.sys.sunrise * 1000).toLocaleTimeString([], {
-                  //     timeStyle: 'short',
-                  //   })
-                ))
-                // .slice(12, 16)
-              }
+              Sunrise:
+              {moment(weather.sys.sunrise, 'X').format('h:mm a')}
             </p>
-            <p>
-              Sunset:{' '}
-              {moment(
-                weather.dt + weather.timezone + weather.sys.sunset
-              ).format('h:mm a')}
-            </p>
+            <p>Sunset: {moment(weather.sys.sunset, 'X').format('h:mm a')}</p>
             {/* <p>
               Sunrise:{' '}
               {
