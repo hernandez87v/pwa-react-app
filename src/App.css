@@ -76,7 +76,7 @@ textarea {
   text-align: center;
   z-index: 1;
   outline: none;
-  padding: 20px 2%;
+  padding: 20px 7%;
   border-radius: 20px;
   border: none;
   margin-bottom: 5%;
@@ -169,7 +169,7 @@ p {
   }
 
   .search {
-    padding: 20px 5%;
+    padding: 20px 15%;
   }
 
   .city {
