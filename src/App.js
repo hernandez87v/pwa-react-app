@@ -6,15 +6,15 @@ import moment from 'moment';
 import './App.css';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
-const trans1 = (x, y) => `translate3d(${x / 10 - 0}px,${y / 10 - 0}px,0)`;
-const trans2 = (x, y) => `translate3d(${x / 6 - 0}px,${y / 6 - 300}px,0)`;
-const trans3 = (x, y) => `translate3d(${x / 5 - 0}px,${y / 5 + 240}px,0)`;
-const trans4 = (x, y) => `translate3d(${x / 5 - 270}px,${y / 5 - 0}px,0)`;
-const trans5 = (x, y) => `translate3d(${x / 6 + 250}px,${y / 5 - 0}px,0)`;
-const trans6 = (x, y) => `translate3d(${x / 7 - 290}px,${y / 7 - 280}px,0)`;
-const trans7 = (x, y) => `translate3d(${x / 8 - 280}px,${y / 8 + 260}px,0)`;
-const trans8 = (x, y) => `translate3d(${x / 5 + 270}px,${y / 5 - 280}px,0)`;
-const trans9 = (x, y) => `translate3d(${x / 8 + 240}px,${y / 8 + 240}px,0)`;
+const trans1 = (x, y) => `translate3d(${x / 5 - 0}px,${y / 5 + 100}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 7 - 0}px,${y / 7 - 300}px,0)`;
+const trans3 = (x, y) => `translate3d(${x / 7 - 0}px,${y / 7 + 400}px,0)`;
+const trans4 = (x, y) => `translate3d(${x / 7 - 280}px,${y / 7 + 100}px,0)`;
+const trans5 = (x, y) => `translate3d(${x / 7 + 280}px,${y / 7 + 100}px,0)`;
+const trans6 = (x, y) => `translate3d(${x / 5 - 280}px,${y / 5 - 280}px,0)`;
+const trans7 = (x, y) => `translate3d(${x / 5 - 280}px,${y / 5 + 400}px,0)`;
+const trans8 = (x, y) => `translate3d(${x / 5 + 280}px,${y / 5 - 280}px,0)`;
+const trans9 = (x, y) => `translate3d(${x / 5 + 280}px,${y / 5 + 400}px,0)`;
 
 const App = () => {
   const [query, setQuery] = useState('');
