@@ -1,4 +1,4 @@
-### Click on the link over there :point_right: to try it out !
+### Click on the link over there :point_right: to try it out or scan 👇🏼 the QR Code !
 
 ![Github Repo Banner for PWA Weather App](/public/images/GH-PWA-Weather-APP.png)
 
