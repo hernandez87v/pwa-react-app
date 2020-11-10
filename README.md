@@ -8,11 +8,11 @@ A PWA(Progressive Web Application) :sunny: weather app optimized to meet :flashl
 
 ## :computer: Desktop Home Page view
 
-![Progressive Weather App Home Page](/public/images/PWA-home.png)
+![Progressive Weather App Home Page](/public/images/PWA-home.jpg)
 
 ## :heavy_check_mark: Lighthouse Score
 
-![Progressive Weather App Lighthouse Score](/public/images/PWA-WeatherApp-Lighthouse-score.png)
+![Progressive Weather App Lighthouse Score](/public/images/PWA-WeatherApp-Lighthouse-score.jpg)
 
 ## :heavy_check_mark: PWA Score
 
@@ -20,7 +20,7 @@ A PWA(Progressive Web Application) :sunny: weather app optimized to meet :flashl
 
 ## :package: PWA Install
 
-![PWA Install button](/public/images/PWA-WeatherApp-install.png)
+![PWA Install button](/public/images/PWA-WeatherApp-install.jpg)
 
 ## Available Scripts
 
