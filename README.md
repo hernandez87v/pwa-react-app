@@ -4,7 +4,7 @@ A PWA(Progressive Web Application) :sunny: weather app optimized to meet :flashl
 
 ## Next up:
 
-:arrow_right: Work on adding more detailed weather info.
+👷🏻‍♂️ The start_url did respond, but not via a service worker. - 🐛Fix
 
 ## :computer: Desktop Home Page view
 
