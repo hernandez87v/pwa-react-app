@@ -1,6 +1,6 @@
 ### Click on the link over there :point_right: to try it out !
 
-A PWA(Progressive Web Application) :sunny: weather app optimized to meet :flashlight: Lighthouse criteria.
+![Github Repo Banner for PWA Weather App](/public/images/GH-PWA-Weather-APP.png)
 
 ## Next up:
 
